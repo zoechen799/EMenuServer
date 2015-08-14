@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta property="wb:webmaster" content="fe7c22dba3d361b1" />
+		<link href="css/kendo.common.min.css" rel="stylesheet">
+		<link href="css/kendo.default.min.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/button.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+		<link href="css/blog.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<script src="js/jquery-1.8.3.js"></script>
+		<script src="js/kendo/kendo.web.min.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/localization.js"></script>
+		<script src="js/kendo/culture/kendo.culture.zh-CHS.min.js"></script>
+		<script src="js/addblog.js"></script>
+		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1730211595" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body >
+	<div id="header-bar"></div>
+    <div class="container">
+		<div class="row">
+			<div class='span8 offset2'>
+        	<span class='blog_title'>新的内容</span>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class='span8 offset2'>
+				<span class='Fm_label1'>标题: </span>
+				<div class="Fm_input1">
+					<input id="articleTitle" type="text" class='span6' value="">
+				</div>
+				<br></br>
+				<div id="editor" rows="10" cols="30"
+					style="width: 940px; height: 440px; margin-left: 10px;"></div>
+				<br></br> <span class='Fm_label1'>标签: </span>
+				<div class="Fm_input1">
+					<input id="labels" type="text" class='span6' size="96" value="">
+				</div>
+				<br></br>
+				<div style="margin-bottom: 40px;"></div>
+				<div class='alert' style="margin-left: 5px;">
+					 <button type="button" class="close" data-dismiss="alert">&times;</button>
+					<p>标签间请用“空格”或“逗号”隔开，最多可添加5个标签。</p>
+				</div>
+				<div class="bottombar">
+					<div class="x-button x-button-confirm" id="submit">
+						<span class="x-button-label">提交</span>
+					</div>
+				</div>
+			</div>
+        </div>
+	    <div id="confirm" class="confirm-dialog">
+	        <div style="width100%"><div class="confirmtitle">您的新闻已经发布成功！</div></div>
+	        <br>
+	        <div style="width100%;margin-top:50px;">
+	            <div style="width:90px; margin:0 auto;">
+	                <input id="gotoview" type=button class="submit-button" value="点击查看"/>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="css/base.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<script src="js/jquery-1.8.3.js"></script>
+		<script src="js/localization.js"></script>
+		<script src="js/config.js"></script>
+</head>
+<style>
+	.version{
+		position: relative;
+		float: left;
+		width: 245px;
+		height: 190px;
+		margin-bottom: 60px;
+		vertical-align: top;
+	}
+</style>
+<body>
+	<div id='header-bar'></div>
+	<div class='container'>
+		<img src='img/bg_fall.jpg' class='span12' style='float:left; position:absolute;'>
+	    <div class='row' style='margin-top:20%;'>
+	    	<div class='span2 offset3 version'>
+            	<img src="img/ipad.png">
+                <h3>iPad客户端</h3>
+                <p>浏览体验更畅快，逛街也可以很苹果一站式的订餐体验。</p>
+                <p class="btn">
+                	<a href="itms-services://?action=download-manifest&url=http://1.ledingcan.sinaapp.com/EMenu.plist" title="App Store" target="_blank">下载内测版</a>
+                </p>
+	    	</div>
+	    	<div class='span2  version'>
+            	<img src="img/iphone.png">
+                <h3>iPhone客户端</h3>
+                <p>浏览体验更畅快，逛街也可以很苹果一站式的订餐体验。</p>
+                <p class="btn">
+                	<a href="itms-services://?action=download-manifest&url=http://1.ledingcan.sinaapp.com/EmenuiPhone.plist" title="App Store" target="_blank">下载内测版</a>
+                </p>
+	    	</div>
+	    	<div class='span2 version'>
+            	<img src="img/android.png">
+                <h3>Android客户端</h3>
+                <p>浏览体验更畅快，逛街也可以很苹果一站式的订餐体验。</p>
+                <p class="btn">
+                	<a href="itms-services://?action=download-manifest&url=http://1.ledingcan.sinaapp.com/EMenu.plist" title="App Store" target="_blank">下载内测版</a>
+                </p>
+	    	</div>
+	    </div>
+	</div>
+</body>
+<script>
+	$("#header-bar").loadHtml(router.templates.header);
+</script>
+</html>

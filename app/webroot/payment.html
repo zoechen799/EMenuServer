@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Order</title>
+<link href="css/kendo.common.min.css" rel="stylesheet">
+<link href="css/kendo.default.min.css" rel="stylesheet">
+<link href="css/base.css" rel="stylesheet">
+<link href="css/button.css" rel="stylesheet">
+<link href="css/payment.css" rel="stylesheet">
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/kendo/kendo.web.min.js"></script>
+<script src="js/config.js"></script>
+</head>
+<body>
+  <div class='maincontent roundbg'>
+      <div id='header-bar'></div>
+      <a href="#" id='logo'>
+            <img class='logo' src="img/logo_small.png" style="width:150px;height:40px; margin-top:0px !important;">
+      </a>
+
+<div class="box">
+        <div class="mainpay">
+            <div class="paytips">订单已提交，请您尽快付款！</div>
+            <table cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <th>您的订单号</th>
+                    <th>应付金额</th>
+                    <th>支付方式</th>    
+                    <th>配送方式</th>
+                </tr>
+                <tr>
+                    <td><strong>1358326822612</strong></td>
+                    <td><strong>158.00</strong>元</td>
+                    <td> 网上支付 </td>
+                    <td>送货上门 </td>
+                </tr>
+                
+            </tbody></table>
+            <div class="onlineC altBox">
+                <p>请选择以下银行支付：</p>
+                <div class="altLayerBox"> <span>支持所有银行，无需开通网银，关联一张银行卡即可轻松支付</span><p></p></div>
+                <ul id="js-bank" class="selectbank">
+                <li style="display:none"><input type="radio" name="hidBankType" tip="4" value="" class="radio"><span class="payA02"></span></li>
+                 
+                 <li><input type="radio" name="hidBankType" tip="1" value="" class="radio"><span class="payA01"></span></li>
+                 <li><input type="radio" name="hidBankType" tip="3" value="" class="radio"><span class="payA02"></span></li>
+                 
+                <li><input type="radio" name="hidBankType" class="radio" tip="1" value="0005"><span class="payB01"></span></li>
+                <li><input type="radio" name="hidBankType" tip="2" value="29" class="radio"><span class="payB02"></span></li>
+                <li><input type="radio" name="hidBankType" class="radio" tip="2" value="45"><span class="payB07"></span></li>
+                <li><input type="radio" name="hidBankType" tip="2" value="27" class="radio"><span class="payB03"></span></li>
+                <li><input type="radio" name="hidBankType" class="radio" tip="1" value="1025"><span class="payB06"></span></li>
+                <li><input type="radio" name="hidBankType" tip="2" value="28" class="radio"><span class="payB04"></span></li>
+                <li><input type="radio" name="hidBankType" tip="2" value="12" class="radio"><span class="payB05"></span></li>
+                <li><input type="radio" name="hidBankType" class="radio" tip="1" value="1022"><span class="payB10"></span></li>
+                <li><input type="radio" name="hidBankType" tip="1" value="0004 " class="radio"><span class="payB11"></span></li>
+                <li><input type="radio" name="hidBankType" tip="1" value="0009" class="radio"><span class="payB08"></span></li>              
+                <li><input type="radio" name="hidBankType" class="radio" tip="1" value="0027"><span class="payB09"></span></li>
+                <li><input type="radio" name="hidBankType" tip="1" value="0028" class="radio"><span class="payB21"></span></li>
+                <li><input type="radio" name="hidBankType" tip="1" value="0021" class="radio"><span class="payB14"></span></li>
+                <li><input type="radio" name="hidBankType" tip="2" value="14" class="radio"><span class="payB12"></span></li>
+                <li><input type="radio" name="hidBankType" tip="1" value="0031" class="radio"><span class="payB13"></span></li>
+               
+                <li style="display:none"><input type="radio" name="hidBankType" tip="1" value="49" class="radio"><span class="payB15"></span></li>
+                <li><input type="radio" name="hidBankType" tip="2" value="53" class="radio"><span class="payB16"></span></li>
+                <li><input type="radio" name="hidBankType" tip="1" value="0032" class="radio"><span class="payB17"></span></li>
+                <li><input type="radio" name="hidBankType" tip="1" value="0026" class="radio"><span class="payB19"></span></li> 
+             
+                </ul>
+                <div class="c"></div>
+                
+                <p>请选择以下支付平台支付：</p>
+                <ul class="selectbank">
+                    <li><input type="radio" tip="5" value="" name="hidBankType" class="radio"><span class="payB23"></span></li>
+                    <li><input type="radio" tip="2" value="" name="hidBankType" class="radio"><span class="payB22"></span></li>
+                </ul>
+                <div class="c"></div>
+                
+                <div class="submitpay"><b>如果您在支付时遇到问题，请拨打免费服务热线：<i>400 6767 051</i></b>
+                <a href="http://payment.17qipei.com/payment.aspx?hidOrderCodes=1358326822612&amp;hidOrderIds=12620&amp;hidUserId=20008640&amp;hidOrderamount=D9A13A60C03F3627&amp;hidPayPlat=5&amp;hidBankType=" id="payHref" onclick="pay();" class="hidefocus" hidefocus="true" target="_blank">付 款</a></div>
+                <div class="c"></div>  
+            </div>
+            <div class="afterpay">完成支付后，您可以：<a href="http://www.yangche51.com/customer/orderdetail.aspx?oid=12620" target="_blank" class="hidefocus" hidefocus="true">查看订单状态</a><a href=" http://www.yangche51.com/" target="_blank" class="hidefocus" hidefocus="true">继续购物</a></div> 
+        </div>
+    </div>  
+ </div>
+</body>
+</html>    

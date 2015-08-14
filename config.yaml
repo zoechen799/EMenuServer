@@ -1,0 +1,6 @@
+name: ledingcan
+version: 1
+handle:
+
+- rewrite:if ( path ~ "^(?!app/webroot/)(.*)" ) goto "/app/webroot/$1?%{QUERY_STRING}"
+- rewrite:if (!is_file() && !is_dir() && path ~ "^app/webroot/(.*)") goto "app/webroot/cake.php?url=$1&%{QUERY_STRING}"

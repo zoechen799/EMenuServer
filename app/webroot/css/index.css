@@ -1,0 +1,77 @@
+#regionmenu li {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: white;
+    border-right-width: 0px;
+    width: 100%;
+}
+.regionSel
+{
+    background-color: orange;
+}
+#listView {
+    min-height: 610px;
+}
+#articleList
+{
+    min-height:300px;
+}
+.article-row
+{
+    padding-bottom:10px;
+    display: inline-block;
+}
+#restaurant_category
+{
+	border-style: inside;
+	border-color: green;
+	border-width: 1px;
+	margin-top: 0px;
+	margin-left:0px;
+	height: 65px;
+}
+.restaurantrow {
+    float: left;
+    width: 635px;
+    margin: 5px;
+    padding: 3px;
+    -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.rowinfo , .rowimg{
+    float: left;
+    margin-left:5px;
+}
+
+.rowadd{
+    position: absolute;
+    font-size: 0.9em;
+    float: left;
+    color: black;
+    margin-top:25px;
+    margin-left: 5px;
+}
+.rowrating{
+    margin-left: 4px;
+    margin-top: 50px;
+}
+.category_row{
+    margin: 0 5px;
+    overflow: hidden;
+}
+
+.category_item
+{
+    padding: 3px 0 0 5px;
+    width: 95px;
+    height: 18px;
+    display:inline-block;
+}
+.category_item a{
+	color:#696969;
+}

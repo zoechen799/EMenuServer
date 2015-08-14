@@ -1,0 +1,55 @@
+<head>
+<link href="css/login.css" rel="stylesheet">
+<script src="js/pages/login.js"></script>
+</head>
+<body>
+	<div id="pop_win_login">
+		<form class="pop_win_login_form" target="hidden_frame">
+			<div class="loginheader">登 陆</div>
+			<fieldset>
+				<div class="item spec" id="alias">
+					<label for="login_alias">用户名</label> <input type="text"
+						id="login_alias" name="alias" class="text pop_email" tabindex="1"
+						autocomplete='off'>
+				</div>
+				<div class="item spec">
+					<label for="login_password">密码</label> <input type="password"
+						id="login_password" name="form_password" class="text" tabindex="2">
+				</div>
+				<div class="item spec">
+					<label for="captcha_solution">验证码</label> <input type="text"
+						name="captcha_solution" id="captcha_solution"
+						class="text short-text" tabindex="3"> 
+					<img id='authcode' src="services/captcha" class="captcha" title="看不清楚?点图片可以换一个">
+				</div>
+
+				<div class="item function">
+					<!-- <a class="btn-forget-pwd" href="javascript:void 0" target="_blank">忘记密码?</a> -->
+				</div>
+				<div class="x-button x-button-confirm" id="btn-login" tabindex="5">
+					<span class="x-button-label">登陆</span>
+				</div>
+
+			</fieldset>
+			<iframe name='hidden_frame' id="hidden_frame" style="display: none;"></iframe>
+		</form>
+		<div class="alternative">
+			<div class="third-party-mod">
+				<p>用其他帐号登录:</p>
+				<ul>
+					<li>
+						<div id="wb_connect_btn" class="signin">新浪微博</div>
+					</li>
+				</ul>
+			</div>
+			<div class="register-mod">
+				<p>还没有账户?</p>
+				<p>
+					<a href="" target="hidden_frame" class="lnk-register">立即注册</a>
+				</p>
+			</div>
+		</div>
+		<div id='logindialog'></div>
+	</div>
+</body>
+</html>

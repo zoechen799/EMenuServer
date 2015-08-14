@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<script type="text/x-kendo-tmpl" id="order-item-template">
+        <div class='order-item form-row'>
+            <div><img src=${pic} /></div>
+            <label>${name}</label>
+            <label>￥${price}元 × ${quantity}份</label>
+        </div>
+</script>
+<body>
+	<form>
+	<fieldset id='process'>
+		<legend>{{localization.order.process_title}}</legend>
+		<div class="form-row" style='padding-top:5px;'>
+			<select id='process_status'>
+			  <option value='new'>{{localization.order.status_new}}</option>
+			  <option value='topay'>{{localization.order.status_topay}}</option>
+			  <option value='reject'>{{localization.order.status_reject}}</option>
+			  <option value='used'>{{localization.order.status_used}}</option>
+			</select>
+			<div class='btn btn-success pull-right' id='save_status'>{{localization.meta.save}}</div>
+		</div>
+	</fieldset>
+ 	<fieldset>
+	    <legend>{{localization.order.restaurant_title}}</legend>
+	    
+	    <label data-bind="text: restaurant_name"></label>
+	    <label data-bind="text: restaurant_address"></label>
+	  </fieldset>
+	  <fieldset>
+	  	<legend>{{localization.order.order_status_title}}</legend>
+	  	<label data-bind="text: order_status"></label>
+	  </fieldset>
+	  <fieldset>
+	  	<legend>{{localization.order.order_user_title}}</legend>
+	  	<div class="form-row">
+	  		<div>{{localization.order.order_user_name}}</div> <label data-bind="text: order_user_name"></label>
+	  	</div>
+	  	<div class="form-row">
+	  		<div>{{localization.order.order_user_tel}}</div> <label data-bind="text: order_user_tel"></label>
+	  	</div>
+	  	<div class="form-row">
+	  		<div>{{localization.order.order_user_gender}}</div><label data-bind="text: order_user_gender"></label>
+	  	</div>
+	  </fieldset>
+	  <fieldset>
+	  	<legend>{{localization.order.order_detail}}</legend>
+	  	<div class="form-row">
+	  		<div>{{localization.order.dinner_time}}</div> <label data-bind="text: dinner_time"></label>
+	  	</div>
+	  	<div class="form-row">
+	  		<div>{{localization.order.dinner_members}}</div> <label data-bind="text: dinner_members"></label>
+	  	</div>
+	  	<div class="form-row">
+	  		<div>{{localization.order.dinner_quantity}}</div> <label data-bind="text: dinner_quantity"></label>
+	  	</div>
+	  	<div class="form-row">
+	  		<div>{{localization.order.dinner_amount}}</div> <label data-bind="text: dinner_amount"></label>
+	  	</div>
+	  	<div class="form-list">
+	  		
+	  	</div>
+	  </fieldset>
+	</form>
+</body>

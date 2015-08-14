@@ -1,0 +1,156 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta property="wb:webmaster" content="fe7c22dba3d361b1" />
+	<link href="css/kendo.common.min.css" rel="stylesheet">
+	<link href="css/kendo.default.min.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/restaurant.css" rel="stylesheet">
+	<link href="css/button.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<script src="js/jquery-1.8.3.js"></script>
+	<script src="js/json2.js"></script>
+	<script src="js/localization.js"></script>
+	<script src="js/kendo/kendo.web.min.js"></script>
+	<script src="js/jquery.raty.min.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/pages/icarousel.js"></script>
+	<script src="js/pages/dishcomments.js"></script>
+	<script src="js/restaurant.js"></script>
+	<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1730211595" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="header-bar"></div>
+	<div class="container">
+		<div class="row">
+			<div class='restaurant_details span8 offset1'>
+				<fieldset>
+					<div class="photo-wrapper">
+						<div>
+							<img src="img/shoplogo1.jpg"></img>
+						</div>
+					</div>
+					<div class="restaurant_desc">
+						<div class="row_main"><span class='title_main' id='title' data-bind="source: name"></span></div>
+						<div class="row_main">
+						   <div id='rating'></div>
+						</div>
+						<script id="ul-template" type="text/x-kendo-template">
+                       <li><span data-bind="text: telnum"></span></li>
+	                </script>
+						<ul class="columns">
+							<li class="column">
+								<div class="row_main">地址:</div>
+								<span id='address' data-bind="text: address"></span>
+								<div class="row_main">&nbsp;</div>
+								<div class="row_main">联系电话:</div>
+								<ul id='telephon' data-template="ul-template" data-bind="source: telephone"></ul>
+							</li>
+							<li class="column">
+								<div class="row_inline">菜系:</div>
+								<span id='cuisine' data-bind="text: category"></span>
+								<div class="row_main">&nbsp;</div>
+								<div class="row_inline">均价:</div>
+								<span id='avgprice'>￥60</span>
+								<div class="row_main">&nbsp;</div>
+								<div class="row_main">营业时间:</div>
+	                            <span id='avgprice' data-bind="text: time"></span>
+							</li>
+						</ul>
+					</div>
+				</fieldset>
+			</div>
+			<div id='map' class='map span3'></div>
+		</div>
+		<div class="row">
+			<div class='span2 offset1'>
+				<ul id="dish_category"></ul>
+			</div>
+			<div id='maincontent' class='span6' >
+				<div class="wrapper">
+				    <div id="tabstrip" class='tabs'></div>
+			    </div>
+			    <div id='menu_container'></div>
+			    <div id='menu_pager'></div>
+			</div>
+			<div class='span3'>
+			  <div id='lightbox' class='lightbox'>
+			      <div class='karttitle'>我的订单</div>
+			      <div id="container">
+			          <div id='totalquanty' style='float:left; margin-left: 10px;'>总数量: <span style='display:inline;' data-bind="text: totalQuantity"/>份</div>
+			          <div id='totalprice' style='float:right; margin-right: 10px;'>总金额: ￥<span style='display:inline;' data-bind="text: totalPrice"/> </div>
+			      </div>
+			  </div>
+			  <div id='grid'></div>
+			  <div class='kartbottom'>
+					  <div class="x-button x-button-decline" id="emptyorder" style='float:left; margin-left: 20px;'>
+			             <span class="x-button-label">清空</span>
+			           </div>
+			           <div class="x-button x-button-confirm" id="submitorder" style='float:right; margin-right: 20px;'>
+			             <span class="x-button-label">下单</span>
+			           </div>
+			  </div>
+			</div>
+		</div>
+		
+		
+	</div>
+	<div id="comments_all_dlg" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		
+	</div>
+	<div id="dishinfo_dlg" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div style="width: 200px;text-align: center;margin: 0 auto;"><span style="font-size:2em;">菜品详情</span></div>
+		<div id="dish_imgs"></div>
+		<div id="dish_intro"><span></span></div>
+	</div>
+	<div id="comments_dlg" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div style="width: 200px;text-align: center;margin: 0 auto;"><span style="font-size:2em;">添加点评</span></div>
+		<div style="float:left; margin-left: 5px;">口味如何</div>
+		<div style="margin-left:10px; float:left;"><div id='dish_rating'></div></div>
+		<div style="margin-left:5px;"><textarea  id='dish_comments' cols="100" rows="5" style="width: 543px;" placeholder="写点什么吧"></textarea></div>
+		<div class="modal-footer">
+			<a id='comments_save' href="javascript:void(0)" class="btn btn-primary">提交</a>
+		    <a id='comments_cancel' href="javascript:$('#comments_dlg').modal('hide');" class="btn">关闭</a>
+		</div>
+	</div>
+	<div id='hiddensection'></div>
+    <script type="text/x-kendo-tmpl" id="dish-template1">
+        <div class="product" name=${Dish.name} data=${Dish.id} price=${Dish.price}>
+			<div class='productleft'> 
+			 <img src="${Dish_picture[0].filepath}"  width=110 height=110/>
+              <h3>${Dish.name}</h3>
+              <p>单价:￥${Dish.price}</p>
+              <div class="product_op">
+                <img class="opicon" id="dishInfo" src="img/hint.png" style="float:left;"></img>
+                <img class="opicon" id="addDish" src="img/add.png" style="float:right;"></img>
+              </div>
+			</div>
+            <div class='remark'>
+				<ul>
+					# if(Dish.comments && Dish.comments.length>0) #
+					# for (var i = 0; i < Dish.comments.length; i++) { #
+        				<li class='remark-row'><div class='remark-row-from'>来自#=Dish.comments[i].Comment.username #的评价:</div> <div class='remark-row-content'>#=Dish.comments[i].Comment.description #</li>
+   					# } #
+				</ul>
+				<div class='remark-row'><a class='newcomment' href='javascript:void'>添加评论</a> <a class='allcomment' href='javascript:void'>所有评论</a></div>
+			</div>
+        </div>
+    </script>
+    <script type="text/x-kendo-tmpl" id="dish-template2">
+        <div class="product" style="width:165px;" name=${Dish.name} data=${Dish.id} price=${Dish.price}>
+			<div class='productleft'> 
+			 <img src="${Dish_picture[0].filepath}"  width=110 height=110/>
+              <h3>${Dish.name}</h3>
+              <p>单价:￥${Dish.price}</p>
+              <div class="product_op">
+                <img class="opicon" id="dishInfo" src="img/hint.png" style="float:left;"></img>
+                <img class="opicon" id="addDish" src="img/add.png" style="float:right;"></img>
+              </div>
+			</div>
+        </div>
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+.x-button{
+    display: -webkit-box !important;
+    margin: 10px !important;
+    -webkit-box-flex: 1;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 0.4em;
+    border-radius: 0.4em;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-align: center;
+    box-align: center;
+    min-height: 1.8em;
+    padding: .3em .6em;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    z-index: 1;
+}
+.x-button-confirm{
+    background-color: #6C9804;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #A2E306), color-stop(3%, #7EB105), color-stop(100%, #5B7F03));
+    background-image: -webkit-linear-gradient(top, #A2E306,#7EB105 3%,#5B7F03);
+    background-image: linear-gradient(top, #A2E306,#7EB105 3%,#5B7F03);
+}
+.x-button-confirm:active{
+    background-image: none;
+    background-color: #628904;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3e5702), color-stop(10%, #507003), color-stop(65%, #628904), color-stop(100%, #648c04));
+    background-image: -webkit-linear-gradient(top, #3e5702, #507003 10%, #628904 65%, #648c04);
+    background-image: linear-gradient(top, #3e5702, #507003 10%, #628904 65%, #648c04);
+}
+
+.x-button-decline{
+	background-image: none;
+	background-color: #C70505;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #F91F1F), color-stop(3%, #E00606), color-stop(100%, #AE0404));
+	background-image: -webkit-linear-gradient(top, #F91F1F,#E00606 3%,#AE0404);
+	background-image: linear-gradient(top, #F91F1F,#E00606 3%,#AE0404);
+}
+.x-button-decline:active{
+	background-image: none;
+	background-color: #B80505;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #860303), color-stop(10%, #9F0404), color-stop(65%, #B80505), color-stop(100%, #BA0505));
+	background-image: -webkit-linear-gradient(top, #860303,#9F0404 10%,#B80505 65%,#BA0505);
+	background-image: linear-gradient(top, #860303,#9F0404 10%,#B80505 65%,#BA0505);
+}
+
+.x-button-confirm:hover , .x-button-decline:hover{
+    cursor: pointer;
+    cursor: hand;
+}
+.x-button-label{
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-box-align: center;
+    box-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2em;
+    display: block;
+    overflow: hidden;
+    color: white;
+    font-size:1.2em;
+}
+.k-grid-add , .k-grid-delete{
+	margin-top: .25em;
+	margin-bottom: 5px;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #DDD !important;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	
+}

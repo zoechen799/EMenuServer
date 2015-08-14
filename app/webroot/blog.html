@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="css/kendo.common.min.css" rel="stylesheet">
+		<link href="css/kendo.default.min.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/blog.css" rel="stylesheet">
+		<link href="css/template.css" rel="stylesheet">
+		<link href="css/button.css" rel="stylesheet">
+        <link href="css/template.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<script src="js/jquery-1.8.3.js"></script>
+		<script src="js/kendo/kendo.web.min.js"></script>
+		<script src="js/localization.js"></script>
+		<script src="js/kendo/culture/kendo.culture.zh-CHS.min.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/blog.js"></script>
+		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1730211595" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id='header-bar'></div>
+	<div class='container'>
+	    <div class='row'>
+	    	<div id='article'></div>
+	    </div>
+	</div>
+	<script type="text/x-kendo-tmpl" id="template">
+	    	<div class='span8 offset2'>
+				<div class='row_center_title'>
+					<a href=''>${name}</a>
+				</div>
+				<span class='row_right_title'>${created}</span> <br />
+				<div class='row_label_title'>
+					<span class='row_label'>标签：</span> # for (var i = 0; i <
+					data.labelarr.length; i++) { # <span class='row_label'><a
+						href=''>#=data.labelarr[i] #</a></span> # } #
+				</div>
+				<br />
+				<div>#=data.body #</div>
+				<br />
+				<div class='row_action'>
+					<div class='row_action_follow'>转载(1)┆</div>
+					<div class='row_action_follow'>回复(1)</div>
+				</div>
+			</div>
+	</script>
+</body>
+</html>

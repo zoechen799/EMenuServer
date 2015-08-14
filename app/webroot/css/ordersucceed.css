@@ -1,0 +1,9 @@
+.succeedinfo{
+	width: 500px;
+    margin: 100 auto;
+}
+.succeedinfo>span
+{
+	font-size: 1.2em;
+    color: #7B7F19;
+}

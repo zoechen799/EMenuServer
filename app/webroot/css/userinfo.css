@@ -1,0 +1,13 @@
+.accout dl, .applysuper dl {
+color: #333;
+font: 14px/24px "宋体";
+margin-bottom: 10px;
+overflow: hidden;
+width: 760px;
+}
+
+.accout dl dt, .applysuper dl dt {
+float: left;
+text-align: right;
+width: 100px;
+}

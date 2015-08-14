@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/login.css" rel="stylesheet">
+<script src="js/pages/register.js"></script>
+</head>
+<body>
+	<div id="register_block">
+		<form class="register" method="post" action="" target="hidden_frame">
+			<div class="registerheader">注 册</div>
+			<span id='errmsg'></span>
+			<fieldset>
+				<div class="item spec">
+					<label for="user_name1">用户名</label> <input type="text"
+						name="user_name" id="user_name1" autocomplete='off' class="text"
+						tabindex="1" placeholder="由英文和数字组成">
+				</div>
+				<div class="item spec">
+					<label for="password">密码</label> <input type="password"
+						name="password" id="password" class="text" tabindex="2">
+				</div>
+				<div class="item spec">
+					<label for="confirm_password">重复密码</label> <input type="password"
+						name="confirm_password" id="confirm_password" class="text"
+						tabindex="3">
+				</div>
+				<div class="item spec">
+					<label for="captcha_solution">验证码</label> 
+					<input type="text" name="captcha_solution1" id="captcha_solution1" class="text short-text" tabindex="3">
+					<img id='authcode1' src='services/captcha' class="captcha" title="看不清楚?点图片可以换一个">
+				</div>
+				<div class="item spec">
+					<input id='isseller' type='checkbox'>我是商户</input>
+					<a href='aggreement.html'>阅读商户条款</a>
+				</div>
+				<div class="x-button x-button-confirm" id="btn-register">
+					<span class="x-button-label">完成注册</span>
+				</div>
+			</fieldset>
+		</form>
+		<div class="alternative">
+			<div class="third-party-mod">
+				<p>用其他帐号登录:</p>
+				<ul>
+					<li>
+						<div id="wb_connect_btn1" class="signin">新浪微博</div>
+					</li>
+				</ul>
+			</div>
+			<div class="login-mod">
+				<p>已经有账户?</p>
+				<p>
+					<a href="" target="hidden_frame" class="lnk-login">现在登录</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<iframe name='hidden_frame' id="hidden_frame" style="display: none;"></iframe>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.blog_title
+{
+	float:left;
+	margin-left: 280px;
+	margin-top: 40px;
+	font-size: 2em;
+	font-family: bold;
+}
+.Fm_label1
+{
+	float: left;
+	padding-top: 2px;
+	margin-left: 3px;
+	font-size: 1.1em;	
+}
+.Fm_input1
+{
+	float:left;
+	margin-left:3px;
+}
+.k-header
+{
+	background-color:#FFFEEB !important;
+	background-image: none,none!important;
+	border-bottom-width: 0px !important;
+}
+.bottombar{
+	padding-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+}
+div.k-window-content
+{
+	padding-top: 0em !important;
+	background-color:#FFFEEB !important;
+}
+.Fm_label1
+{
+	line-height: 26px;
+	font-size: 18px;
+}
+.Fm_input1{
+	line-height: 40px;
+	font-size: 18px;
+	margin-left:10px;
+	margin-top:3px;
+}
+.confirmtitle
+{
+	margin: 0 auto;
+	width: 300px;
+	color: #CCC;
+	font-size: 20px;
+	text-align: center;
+}

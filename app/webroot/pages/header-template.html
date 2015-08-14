@@ -1,0 +1,60 @@
+<html>
+<head>
+    <link href="./css/header-template.css" rel="stylesheet">
+	<script src="./js/pages/header-template.js"></script>
+</head>
+<body>
+	<header class="jumbotron">
+        <div class="navbar navbar-inverse x-navibar-inner navbar-fixed-top">
+            <div class="row">
+                <a class="brand" href="javascript:router.gotoView('index')" style="margin-left: 20px;">{{localization.header.telenumber}}</a>
+                <div class="nav-collapse collapse pull-right">
+                    <ul class="nav">
+                    	<li class="dropdown" id='user-name'><a ref="#" class="dropdown-toggle"
+                               data-toggle="dropdown"><span id='user-menu'></span><b class="caret"></b></a>
+                               <ul class="dropdown-menu pull-right">
+                                   <li><a id='user-settings' href="javascript:void(0)"><i class="icon-cog"></i>&nbsp;{{localization.header.userinfo}}</a></li>
+                                   <li><a id='logout' href="javascript:void(0)"><i class="icon-off"></i>&nbsp;{{localization.header.logout}}</a></li>
+                               </ul>
+                        </li>
+                        <li id="user-login"><a href="javascript:void(0)">{{localization.header.login}}</a></li>
+                        <li id="user-signup"><a href="javascript:void(0)">{{localization.header.register}}</a></li>
+                        <li id="user-orders"><a href="javascript:void(0)">{{localization.header.userorders}}</a></li>
+                        <li id="mobile-version"><a href="javascript:router.gotoView('mobile')">{{localization.header.mobile}}</a></li>
+                        <li id="contactus"><a href="javascript:void(0)">{{localization.header.contactus}}</a></li>
+                        <li id="mypost"><a href="javascript:router.gotoView('bloglist')">{{localization.header.mypost}}</a></li>
+                        <li id="newpost"><a href="javascript:router.gotoView('addblog')">{{localization.header.newpost}}</a></li>
+                        <li id="help"><a href="javascript:void(0)">{{localization.header.help}}</a></li>
+                        
+                    </ul>
+                </div>
+          </div>
+        </div>
+        <div class="navbar">
+            <div class="container">
+                <div class="span2">&nbsp;</div>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown"><a href="#" class="dropdown-toggle"
+                            data-toggle="dropdown">上海<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">上海</a></li>
+                            </ul></li>
+                    </ul>
+                </div>
+                <form class="navbar-search pull-left" action="">
+                    <input id='text-search' type="text" x-webkit-speech class="search-query span7" placeholder={{localization.header.placeholder}}>
+                    <a id='btn-search' class="btn btn-primary" href="#" style='margin-top:0px; margin-left: 10px;'><i class="icon-search"></i> {{localization.header.search}}</a>
+                </form>
+            </div>
+        </div>
+        <div  class="navbar">
+           <div class="container">
+                    <ul class="breadcrumb x-breadcrumb"></ul>
+           </div>
+        </div>
+    </header>
+    <div id="logindialog"></div>
+    <div id="regdialog"></div>
+</body>
+</html>

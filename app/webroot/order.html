@@ -1,0 +1,121 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="wb:webmaster" content="fe7c22dba3d361b1" />
+<link href="css/kendo.common.min.css" rel="stylesheet">
+<link href="css/kendo.default.min.css" rel="stylesheet">
+<link href="css/base.css" rel="stylesheet">
+<link href="css/order.css" rel="stylesheet">
+<link href="css/button.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/localization.js"></script>
+<script src="js/kendo/kendo.web.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/order.js"></script>
+<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1730211595" type="text/javascript" charset="utf-8"></script>
+     
+</head>
+<body>
+  <div id="header-bar"></div>
+  <div class="container">
+  <div class='span12 fullrow violetbg'><span>确认订单信息</span></div>
+  	<div class='span8'>
+  		<div >
+	      <div class="labeldate"><span id='orderat' style='width:80% !important'></span></div>
+	      <div id='grid'></div>
+	     </div>
+  	</div>
+  	
+  	<div class='span2'>
+  		<div class="labeldate"><span>选择就餐日期</span></div>
+        <div id="calendar"></div>
+        <div class="labeldate"><span>选择就餐时间</span></div>
+        <div class="choosefield">
+           <img src="img/customer_history_grey_16.png"></img>
+           <select id="ordertime">
+		        <option value="12:00:00">12:00 AM</option>
+		        <option value="12:30:00">12:30 AM</option>
+		        <option value="01:00:00">1:00 AM</option>
+		        <option value="01:30:00">1:30 AM</option>
+		        <option value="02:00:00">2:00 AM</option>
+		        <option value="02:30:00">2:30 AM</option>
+		        <option value="03:00:00">3:00 AM</option>
+		        <option value="03:30:00">3:30 AM</option>
+		        <option value="04:00:00">4:00 AM</option>
+		        <option value="04:30:00">4:30 AM</option>
+		        <option value="05:00:00">5:00 AM</option>
+		        <option value="05:30:00">5:30 AM</option>
+		        <option value="06:00:00">6:00 AM</option>
+		        <option value="06:30:00">6:30 AM</option>
+		        <option value="07:00:00">7:00 AM</option>
+		        <option value="07:30:00">7:30 AM</option>
+		        <option value="08:00:00">8:00 AM</option>
+		        <option value="08:30:00">8:30 AM</option>
+		        <option value="09:00:00">9:00 AM</option>
+		        <option value="09:30:00">9:30 AM</option>
+		        <option value="10:00:00">10:00 AM</option>
+		        <option value="10:30:00">10:30 AM</option>
+		        <option value="11:00:00">11:00 AM</option>
+		        <option value="11:30:00">11:30 AM</option>
+		        <option value="12:00:00">12:00 PM</option>
+		        <option value="12:30:00">12:30 PM</option>
+		        <option value="13:00:00">1:00 PM</option>
+		        <option value="13:30:00">1:30 PM</option>
+		        <option value="14:00:00">2:00 PM</option>
+		        <option value="14:30:00">2:30 PM</option>
+		        <option value="15:00:00">3:00 PM</option>
+		        <option value="15:30:00">3:30 PM</option>
+		        <option value="16:00:00">4:00 PM</option>
+		        <option value="16:30:00">4:30 PM</option>
+		        <option value="17:00:00">5:00 PM</option>
+		        <option value="17:30:00">5:30 PM</option>
+		        <option value="18:00:00">6:00 PM</option>
+		        <option value="18:30:00">6:30 PM</option>
+		        <option value="19:00:00">7:00 PM</option>
+		        <option value="19:30:00">7:30 PM</option>
+		        <option value="20:00:00">8:00 PM</option>
+		        <option value="20:30:00">8:30 PM</option>
+		        <option value="21:00:00">9:00 PM</option>
+		        <option value="21:30:00">9:30 PM</option>
+		        <option value="22:00:00">10:00 PM</option>
+		        <option value="22:30:00">10:30 PM</option>
+		        <option value="23:00:00">11:00 PM</option>
+		        <option value="23:30:00">11:30 PM</option>
+        </select>
+        </div>
+        <div class="labeldate"><span>选择就餐人数</span></div>
+        <div class="choosefield">
+           <img src="img/people.png"></img>
+           <select id="membercount">
+                <option value="1">1 人</option>
+		        <option selected="selected" value="2">2 人</option>
+		        <option value="3">3 人</option>
+		        <option value="4">4 人</option>
+		        <option value="5">5 人</option>
+		        <option value="6">6 人</option>
+		        <option value="7">7 人</option>
+		        <option value="8">8 人</option>
+		        <option value="9">9 人</option>
+		        <option value="10">10 人</option>
+		        <option value="20">20 人</option>
+		        <option value="-1">我要定酒席</option>
+           </select>
+        </div>
+        <div class="labeldate" style="margin-top:15px;"><span style="width: 270px;">以下是您的订单信息。请仔细核对后，点击“提交订单”按钮下单。</span></div>
+        <div class="report">
+           <div class='report-inline'>总数量: <span id='totalquanty-span'/>份</div>
+           <div class='report-inline'>总金额: ￥<span id='totalprice-span'/> </div>
+           <div class='report-inline'>就餐日期: <span id='dinner-date'/> </div>
+           <div class="x-button x-button-confirm" id="commitorder" >
+            <span class="x-button-label">提交订单</span>
+           </div>
+        </div>
+  	</div>
+  
+  </div>
+</body>
+</html>

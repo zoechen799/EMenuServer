@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta property="wb:webmaster" content="fe7c22dba3d361b1" />
+		<link href="css/kendo.common.min.css" rel="stylesheet">
+		<link href="css/kendo.default.min.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/button.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+		<script src="js/jquery-1.8.3.js"></script>
+		<script src="js/json2.js"></script>
+		<script src="js/localization.js"></script>
+		<script src="js/kendo/kendo.web.min.js"></script>
+		<script src="js/jquery.raty.min.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/emenu.js"></script>
+		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1730211595" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	<div id="header-bar"></div>  
+	<div class="container maincontainer">
+	   <div class='row'>
+		   	<div class="span2" style='height:67px; background:transparent;'></div>
+		   	<div class='span10'>
+		   		<table id="restaurant_category">
+		   		</table>
+		   	</div>
+		   	
+	   </div>
+	   
+	   <div class="row">
+	       <div class='span2'>
+	           <ul id="regionmenu"></ul>
+	       </div>
+	       <div class='span8'>
+	            <div id="filterSection">
+                <div id="tabstrip-filters"></div>
+	            </div>
+	            <div id="listView"></div>
+	            <div id="pager" class="k-pager-wrap"></div>
+	       </div>
+	       <div class ='span2'>
+	           <div id="articleList"></div>
+	       </div>
+	   </div>
+	</div>
+	<script type="text/x-kendo-tmpl" id="restaurant-template">
+        <div class="restaurantrow">
+			<div class='rowimg'>
+			  <img width="80" height="80" border="0" src="${logourl}">
+			</div>
+			<div class='rowinfo'>
+				<a class='rowinfo' href='${link}'>${name}</a>
+            	<p class='rowadd'>地址:${address}</p>
+			 <div class='rowrating' value="${rating}"></div>
+			</div>
+        </div>
+    	</script>
+    	<script type="text/x-kendo-tmpl" id="article-template">
+		<div class="article-row">
+			<a class='rowinfo' href='javascript:router.gotoView("blog",${Blog.id})'>${Blog.name}</a>
+			<br/>
+		</div>
+    </script>
+	 
+	<body>
+	</html>

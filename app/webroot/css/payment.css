@@ -1,0 +1,23 @@
+.mainpay .onlineC {
+margin: 15px 0 0 0px;
+border: 1px solid #CCC;
+padding: 0px 0 20px 20px;
+}
+
+.mainpay .radio {
+display: block;
+width: 12px;
+height: 20px;
+float: left;
+margin-top: 18px;
+margin-right: 10px;
+}
+
+.mainpay .onlineC span {
+display: block;
+width: 162px;
+height: 42px;
+float: right;
+margin-top: 10px;
+cursor: pointer;
+}

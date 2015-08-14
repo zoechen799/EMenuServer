@@ -1,0 +1,42 @@
+html,body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,a,img,th,td,form,fieldset,iframe,object,pre,code,legend,blockquote{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+body,span,div,li,td,th {
+    font: 15px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+}
+.row fieldset{
+	border: 1px groove threedface;
+}
+body{
+	background: url(../img/bg4.png) repeat ;
+}
+
+.maincontainer{
+	margin-top: -45px;
+	position: relative;
+	background: url(../img/bg7.png) repeat;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	border-top-width: 2px;
+	border-top-color: white;
+	border-style: solid;
+	border-left-width: 2px;
+	border-left-style: solid;
+	border-left-color: white;
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-right-color: white;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: white;
+	box-shadow: inset 0px 0px 29px 7px #AAAAAA,5px 5px 31px 1px #6B6B6B;
+	-webkit-box-shadow: inset 0px 0px 29px 7px #AAAAAA,5px 5px 31px 1px #6B6B6B;
+	-moz-box-shadow: inset 0px 0px 29px 7px #AAAAAA,5px 5px 31px 1px #6B6B6B;
+	-o-box-shadow: inset 0px 0px 29px 7px #AAAAAA,5px 5px 31px 1px #6B6B6B;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src='js/pages/usergrade.js'></script>
+<body>
+	<div id= 'info-container' class="row-fluid">
+	  <div class="span8">
+	  	<form>
+		  	<fieldset>
+			  	<legend>{{localization.usergrade.gradetitle}}</legend><br>
+			  	<div class="form-row">
+			  		<div>{{localization.usergrade.mygrade}}</div><label data-bind="text: grade" ></label>
+			  	</div>
+			  	<div class="form-row">
+			  		<div>{{localization.usergrade.graderight}}</div><label data-bind="text: gradedesc" ></label>
+			  	</div>
+			</fieldset>
+	  	</form>
+	  </div>
+	</div>
+</body>

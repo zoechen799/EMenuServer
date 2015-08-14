@@ -1,0 +1,51 @@
+.form-row{
+	padding-left: 20px;
+}
+.form-row>div{
+	display: inline-block;
+	width: 150px;
+}
+ .form-row>label{
+	display: inline;
+}
+fieldset>legend{
+	margin-top: 3em;
+	margin-bottom: 0;
+}
+#detail-info{
+	background: transparent;
+	border: none;
+}
+#detail-info legend{
+	border-bottom-color: #DDD;
+}
+.order-grid{
+	padding: 3px;
+	background: transparent;
+}
+.order-grid td{
+	border-width: 0 0 1px 1px;
+}
+.form-list{
+	margin-top: 30px;
+	background-color: transparent;
+	border-style: none;
+}
+.order-item{
+	width: 300px;
+	height:  55px; 
+	display: inline;
+}
+.order-item img{
+	width: 50px;
+	height: 50px;
+}
+#uploadavata{
+	margin: 0 auto;
+	display: block;
+}
+.addimg{
+	position: absolute;
+	left: 50px;
+	opacity: 0.8;
+ }
